@@ -1,0 +1,30 @@
+<% include ./partials/header.ejs %>
+<div class="carousel slide carousel-fade" data-ride="carousel">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    </div>
+    <div class="item">
+    </div>
+    <div class="item">
+    </div>
+  </div>
+</div>
+<h1><%= title %></h1>
+
+<main class="container">
+  <table style="width:100%">
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+    </tr>
+      <% for (var i=0; i < useraccs.length; i++) { %>
+    <tr>
+      <td><%= useraccs[i]._id %></td>
+      <td><%= useraccs[i].username %></td>
+    </tr>
+      <% } %>
+  </table>
+</main>
+
+<% include ./partials/footer.ejs %>

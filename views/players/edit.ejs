@@ -1,0 +1,38 @@
+<% include ../partials/header.ejs %>
+
+<main class="container">
+  <div class="carousel slide carousel-fade" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+    </div>
+  </div>
+  <h1>Player Details</h1>
+  <form method="post">
+    <div class="form-group">
+      <label for="Team" class="col-sm-2 control-label">Team: *</label>
+      <input name="Team" id="Team" required value="<%= player.Team %>" />
+    </div>
+    <div class="form-group">
+      <label for="PlayerName" class="col-sm-2 control-label">PlayerName: *</label>
+      <input name="PlayerName" id="PlayerName" required value="<%= player.PlayerName %>" />
+    </div>
+    <div class="form-group">
+      <label for="BattingPosition" class="col-sm-2 control-label">BattingPosition:</label>
+      <input name="BattingPosition" id="BattingPosition"  type="string" value="<%= player.BattingPosition %>"  />
+    </div>
+    <div class="form-group">
+      <label for="PlayerNumber" class="col-sm-2 control-label">PlayerNumber:</label>
+      <input name="PlayerNumber" id="PlayerNumber" min="10" type="number" step="any" value="<%= player.PlayerNumber %>" />
+    </div>
+    <button class="btn btn-success col-sm-offset-2">Save</button>
+  </form>
+
+</main>
+
+<% include ../partials/footer.ejs %>
