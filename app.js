@@ -85,20 +85,6 @@ passport.use(new GoogleStrategy({
         });
     }
 ));
-//github
-var GitHubStrategy = require('passport-github').Strategy;
-
-passport.use(new GitHubStrategy({
-        clientID: globals.github.clientID,
-        clientSecret: globals.github.clientSecret,
-        callbackURL: globals.github.callbackURL
-    },
-    function(accessToken, refreshToken, profile, cb) {
-        User.findOrCreate({ githubId: profile.id }, function (err, user) {
-            return cb(err, user);
-        });
-    }
-));
 
 // manage user login status through the db
 passport.serializeUser(Account.serializeUser());
