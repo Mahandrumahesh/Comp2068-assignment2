@@ -8,7 +8,7 @@ var Account = require('../models/account');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', {
-        title: 'COMP2068 - Players',
+        title: 'Players',
         user: req.user
     });
 });
@@ -91,5 +91,18 @@ router.get( '/google/callback',
         successRedirect: '/players',
         failureRedirect: '/login'
     }));
+//github
+router.get('/github', passport.authenticate('github', { scope: 'email'}));
 
+router.get('/github/callback',
+    passport.authenticate('github',
+        {
+            failureRedirect: '/login',
+            scope: 'email'
+
+        }),
+    function(req, res) {
+        // Successful authentication, redirect to lists.
+        res.redirect('/players');
+    });
 module.exports = router;
