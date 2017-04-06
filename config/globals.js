@@ -13,6 +13,6 @@ module.exports = {
     google: {
         clientID: '865293236726-uaub0ga32tbmqk2ccju6ll1dp78k5uoq.apps.googleusercontent.com',
         clientSecret: 'pwhFjTVglYTu6WjElVR9WrzY',
-        callbackURL: 'http://localhost:3000/google/callback'
+        callbackURL: 'https://mahesh-players.herokuapp.com/google/callback'
     }
 };
