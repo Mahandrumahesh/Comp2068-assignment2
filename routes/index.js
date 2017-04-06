@@ -13,6 +13,14 @@ router.get('/', function(req, res, next) {
     });
 });
 
+/* GET home page. */
+router.get('/fileupload', function(req, res, next) {
+    res.render('fileupload', {
+        title: 'File Upload',
+        user: req.user
+    });
+});
+
 /* GET register */
 router.get('/register', function(req, res, next) {
     // load the register.ejs view
