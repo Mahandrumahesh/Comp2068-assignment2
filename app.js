@@ -86,6 +86,7 @@ passport.use(new GoogleStrategy({
     }
 ));
 
+
 // manage user login status through the db
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
