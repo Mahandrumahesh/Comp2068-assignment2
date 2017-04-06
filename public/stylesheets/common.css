@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    color: orangered;
+    color: firebrick;
 }
 
 legend {
@@ -86,14 +86,6 @@ a:hover {
     background-size: cover;
 }
 
-.item:nth-child(2) {
-    background-image: url("../images/bg2.jpg");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 .item:nth-child(3) {
     background: url("../images/bg3.jpg");
     -webkit-background-size: cover;
@@ -102,7 +94,13 @@ a:hover {
     background-size: cover;
 }
 
-
+.item:nth-child(2) {
+    background: url("../images/Pallekele-Cricket-Stadium-001.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .carousel {
     z-index: -99;
