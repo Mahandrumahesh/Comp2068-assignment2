@@ -7,7 +7,7 @@ module.exports = {
     facebook: {
         clientID: '1944680639084904',
         clientSecret: '8690b13596b9fa684eac11a6d33beda4',
-        callbackURL: 'https://mahesh-players.herokuapp.com/facebook/callback'
+        callbackURL: 'http://localhost:3000/facebook/callback'
     },
     //authentication for the google
     google: {
